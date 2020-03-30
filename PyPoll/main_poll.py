@@ -47,21 +47,21 @@ with open(pypoll_csv,'r') as csvfile:
     Percent_Tooley = (count4/voter)*100
 
 # Create lists of candiates and vote counts
-candidates = ["O'Tooley", "Correy", "Li", "Khan",]
+candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 counts = [count, count2, count3, count4,]
 
 # Merge lists into tuples
 voter_count = zip(candidates, counts)
 
+winner = max(counts)
+
 # Find highest voter count
 with open(pypoll_csv, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    winner = max(counts)
-
     for row in voter_count:
-        row[1] == winner
-        winner_name = row[0]
+        if row[1] == winner:
+            winner_name = row[0]
 
 # Print results and export txt file
 print("Election Results")
