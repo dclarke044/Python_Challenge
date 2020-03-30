@@ -41,10 +41,10 @@ with open(pypoll_csv,'r') as csvfile:
         count3 = count3 + (candidate.count("Li"))
         count4 = count4 + (candidate.count("O'Tooley"))
 # Set vote percentages
-    Percent_Khan = (count/voter)*100
-    Percent_Correy = (count2/voter)*100
-    Percent_Li = (count3/voter)*100
-    Percent_Tooley = (count4/voter)*100
+    Percent_Khan = (round((count/voter)*100))
+    Percent_Correy = (round((count2/voter)*100))
+    Percent_Li = (round((count3/voter)*100))
+    Percent_Tooley = (round((count4/voter)*100))
 
 # Create lists of candiates and vote counts
 candidates = ["Khan", "Correy", "Li", "O'Tooley"]

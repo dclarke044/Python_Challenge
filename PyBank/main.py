@@ -41,7 +41,7 @@ with open(pybank_csv, 'r') as csvfile:
 # Add the next value to the revenure change list
         revenue_change.append(int(total_count[deck+1] - int(total_count[deck])))
         
-average_change = (sum(revenue_change)/85)
+average_change = (round((sum(revenue_change)/85)))
 
 # Merge Date list and Revenue Change list
 revchange = zip(dates, revenue_change)
